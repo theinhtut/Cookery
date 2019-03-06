@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="img/favicon.png" type="image/png">
         <title>Bakery Point</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.css">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/preloader.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
@@ -22,6 +23,20 @@
         <link rel="stylesheet" href="css/responsive.css">
     </head>
     <body>
+		<!--================Preloader =================-->
+		<div id="main_div">
+			<div id="loader">
+					<div id="shadow"></div>
+					<div id="box"></div>
+				</div>
+			
+				<div class="preloader_text">
+					COOKIES IN PROGRESS 🍪
+				</div>
+		</div>
+		<!--================ End of Preloader =================-->
+
+		<main>
 
         <!--================Offcanvus Menu Area =================-->
         <div class="side_menu">
@@ -108,8 +123,13 @@
         	</div>
         </div>
         <!--================End Canvus Menu Area =================-->
-
-        <!--================Home Banner Area =================-->
+		<!-- <div id="mount">
+				<div class="col">
+					asdf
+				</div>
+		</div> -->
+		<!--================Home Banner Area =================-->
+			
         <section class="home_slider" >
 			<div class="swiper-container" >
 				<div class="swiper-wrapper" >
@@ -130,9 +150,11 @@
 					</div>
 				</div>
 			</div>
+		
 
         </section>
-        <!--================End Home Banner Area =================-->
+		<!--================End Home Banner Area =================-->
+		
 
         <!--================Story Area =================-->
         <section class="about_story_area p_120">
@@ -469,7 +491,7 @@
 		<!--================ End footer Area  =================-->
 
 
-
+	</main>
 
 
         <!-- Optional JavaScript -->
@@ -490,6 +512,20 @@
         <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
         <script src="vendors/swiper/js/swiper.min.js"></script>
         <script src="vendors/scroll/jquery.mCustomScrollbar.js"></script>
-        <script src="js/theme.js"></script>
+		<script src="js/theme.js"></script>
+		
+		
+		<script>
+		$(document).ready(function(){
+			$('main').hide();
+			$(window).on({
+				load: function(){
+				$('#main_div').hide();
+				$('main').show();
+				}
+
+			})
+		})
+		</script>
     </body>
 </html>
